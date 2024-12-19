@@ -10,5 +10,6 @@ object Main {
     val name = Thread.currentThread().getName()
     println(s"Thread $name: Hello, world!")
     Info.show
+    println(Generic.twice(Generic.id, 1))
   }
 }

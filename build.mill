@@ -15,6 +15,9 @@ object `package` extends RootModule with SbtNativeModule {
   // Set the releaseMode to ReleaseFast.
   def releaseMode: T[ReleaseMode] = ReleaseMode.ReleaseFast
 
+  /** Shall linker dump intermediate NIR after every phase? */
+  override def nativeDump: T[Boolean] = true
+
   // Set incremental compilation to true
   def nativeIncrementalCompilation: T[Boolean] = true
 
